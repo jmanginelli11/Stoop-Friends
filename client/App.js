@@ -6,15 +6,15 @@ export default function App() {
   return (
     // <View style={styles.container}>
     //   <Text>Open up App.js to start working on your app!</Text>
-    //   <StatusBar style="auto" />
+    //   <StatusBar style='auto' />
     // </View>
     <MapView
       style={{ flex: 1 }}
       provider={PROVIDER_GOOGLE}
-      showsUserLocation
+      showsUserLocation={true}
       initialRegion={{
-        latitude: 37.78825,
-        longitude: -122.4324,
+        latitude: 40.688615,
+        longitude: -74.018907,
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
       }}
