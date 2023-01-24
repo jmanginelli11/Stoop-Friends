@@ -1,24 +1,47 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import MapView, { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
 
 export default function App() {
+  // console.log(userLocation);
   return (
     // <View style={styles.container}>
     //   <Text>Open up App.js to start working on your app!</Text>
     //   <StatusBar style='auto' />
     // </View>
-    <MapView
-      style={{ flex: 1 }}
-      provider={PROVIDER_GOOGLE}
-      showsUserLocation={true}
-      initialRegion={{
-        latitude: 40.688615,
-        longitude: -74.018907,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421,
-      }}
-    />
+    <View style={{ flex: 1 }}>
+      <Text
+        style={{ flex: 1, marginTop: 50, textAlign: 'center', fontSize: 25 }}
+      >
+        Welcome to Super-Stooper
+      </Text>
+      <StatusBar style='auto' />
+      <MapView
+        style={{ flex: 10, margin: 30 }}
+        // provider={PROVIDER_GOOGLE}
+        // provider='google'
+        showsUserLocation={true}
+        followsUserLocation={true}
+        initialRegion={{
+          latitude: 40.688615,
+          longitude: -74.018907,
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
+        }}
+      >
+        <Marker
+          coordinate={{
+            latitude: 40.688615,
+            longitude: -74.018907,
+          }}
+          pinColor='black'
+        >
+          <Callout>
+            <Text>STOOP SALE</Text>
+          </Callout>
+        </Marker>
+      </MapView>
+    </View>
   );
 }
 
