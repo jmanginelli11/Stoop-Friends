@@ -1,5 +1,6 @@
 import MapView, { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
 import { StyleSheet, Text, View } from 'react-native';
+import Sales from './Sales';
 
 export default function Map() {
   return (
@@ -18,6 +19,7 @@ export default function Map() {
         longitudeDelta: 0.0421,
       }}
     >
+      <Sales />
       <Marker
         coordinate={{
           latitude: 40.688615,
