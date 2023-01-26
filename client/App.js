@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+
 import MapView, { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
 
 export default function App() {
@@ -48,6 +49,7 @@ export default function App() {
       </MapView>
     </View>
   );
+
 }
 
 const styles = StyleSheet.create({
