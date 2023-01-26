@@ -8,6 +8,7 @@ const dummySales = [
       latitude: 40.75901,
       longitude: -73.984474,
     },
+    where: 'Times Square',
     hours: {
       start: '9AM',
       end: '4PM',
@@ -20,6 +21,7 @@ const dummySales = [
       latitude: 40.782864,
       longitude: -73.965355,
     },
+    where: 'Central Park',
     hours: {
       start: '9AM',
       end: '4PM',
@@ -34,11 +36,11 @@ export default function Sales() {
       <Marker key={sale.id} coordinate={sale.coordinates} pinColor='black'>
         <Callout>
           <Text>STOOP SALE</Text>
-          <Text>Address </Text>
+          <Text>Where: {sale.where}</Text>
           <Text>
-            Hours {sale.hours.start} - {sale.hours.end}
+            Hours: {sale.hours.start} - {sale.hours.end}
           </Text>
-          <Text>What kinda stuff is there {sale.stuff}</Text>
+          <Text>Stuff: {sale.stuff}</Text>
         </Callout>
       </Marker>
     );
