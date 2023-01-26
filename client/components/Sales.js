@@ -26,7 +26,7 @@ const dummySales = [
       start: '9AM',
       end: '4PM',
     },
-    stuff: 'cloths books media',
+    stuff: ['cloths', 'books', 'media'],
   },
 ];
 
@@ -40,7 +40,7 @@ export default function Sales() {
           <Text>
             Hours: {sale.hours.start} - {sale.hours.end}
           </Text>
-          <Text>Stuff: {sale.stuff}</Text>
+          <Text>Stuff: {sale.stuff.join(', ')}</Text>
         </Callout>
       </Marker>
     );
