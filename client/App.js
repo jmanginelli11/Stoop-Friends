@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Alert, StyleSheet, Text, View, Button } from 'react-native';
 import MapView, { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
 import Map from './components/Map';
+import Post from './components/Post';
 
 export default function App() {
   return (
@@ -17,6 +18,12 @@ export default function App() {
       </Text>
       <StatusBar style='auto' />
       <Map />
+      <Button
+        style={StyleSheet.title}
+        title='POST A STOOP SALE'
+        color='purple'
+        onPress={() => Alert.alert('look at you, you pressed the button')}
+      />
     </View>
   );
 }
