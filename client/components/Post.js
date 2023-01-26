@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 
+//button that says "post a sale"
 //drop a pin on a location
 //form pops up to post a sale
 
