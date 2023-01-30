@@ -1,4 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
+
 import {
   Alert,
   StyleSheet,
@@ -7,6 +8,7 @@ import {
   Button,
   SafeAreaView,
 } from 'react-native';
+
 import MapView, { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
 import Map from './components/Map';
 import Post from './components/Post';
@@ -36,6 +38,7 @@ export default function App() {
       </View>
     </View>
   );
+
 }
 
 const styles = StyleSheet.create({
