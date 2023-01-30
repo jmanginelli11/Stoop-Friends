@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
 import MapView, { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
-import Map from './components/Map';
+import Map from './client/components/Map';
 
 export default function App() {
   return (
@@ -16,11 +16,10 @@ export default function App() {
       >
         Welcome to Super-Stooper
       </Text>
-      <StatusBar style='auto' />
+      <StatusBar style="auto" />
       <Map />
     </View>
   );
-
 }
 
 // const styles = StyleSheet.create({
