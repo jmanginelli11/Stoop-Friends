@@ -1,8 +1,8 @@
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 
-//button that says "post a sale"
-//drop a pin on a location
-//form pops up to post a sale
+//when user clicks on "post a sale" a form pops up with sale information
+//coordinates are autofilled with user's location || a pin pops up that is draggable, the location of the pin autofills the coordinates of the sale
+//once the sale is saved, the pin is no longer draggable (unless being edited)
 
 export default function Post() {
   return (
