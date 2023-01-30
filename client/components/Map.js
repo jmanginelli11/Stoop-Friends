@@ -5,7 +5,7 @@ import Sales from './Sales';
 export default function Map() {
   return (
     <MapView
-      style={{ flex: 10, margin: 30 }}
+      style={{ flex: 10, margin: 30, borderRadius: 10 }}
       provider={PROVIDER_GOOGLE}
       // provider='google'
       showsUserLocation={true}

@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
 import MapView, { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
-import Map from './client/components/Map';
+import Map from './components/Map';
 
 export default function App() {
   return (
