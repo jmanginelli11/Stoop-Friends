@@ -1,8 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import {
+  Alert,
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  SafeAreaView,
+} from 'react-native';
 import MapView, { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
 import Map from './client/components/Map';
+import Post from './client/components/Post';
 
 export default function App() {
   return (
@@ -16,17 +23,32 @@ export default function App() {
       >
         Welcome to Super-Stooper
       </Text>
-      <StatusBar style="auto" />
+      <StatusBar style='auto' />
       <Map />
+      <View style={styles.button}>
+        <Button
+          // style={styles.fixToText}
+          title='POST A STOOP SALE'
+          color='purple'
+          onPress={() => Alert.alert('look at you, you pressed the button')}
+        />
+      </View>
     </View>
   );
 }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  button: {
+    textAlign: 'center',
+    marginBottom: 30,
+    marginHorizontal: 30,
+    backgroundColor: '#f194ff',
+    borderRadius: 10,
+  },
+});
